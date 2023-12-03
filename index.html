@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Weather_Map</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Find Weather at your City</h1>
+    <h3 id="error" style="color: brown;"></h3>
+    <input type="text" id="inpValue" placeholder="Enter City Name"><button id="btn" spellcheck="true">Search</button>
+
+    <div id="root">
+        <div id="weather">
+            <h1 id="city">City</h1>
+            <div id="sun">
+                <div>
+                    <p id="sunrise">Sunrise</p>
+                </div>
+                <div><p id="sunset">Sunset </p></div>
+            </div>
+            <img id="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAk1BMVEX29va9xcj80SP29vj29vXN0dTh5ebDycz29vn39fb90CC+xcj5+fn80ST80By7wsb766389dv60i750TX68tP5+PL667Ho6+z6+O7w8fL79uD69+n79+X988778L/r7O7R1tn66KP41kz55Zj54of31lba3uD422z300L67Lb678H65JH433n52V/54nv534Dy4aapW53cAAAN0UlEQVR4nO1dCWOqOBdFEkAhhLog4opacR+////rvtwkLFZAbekUGM5703FqiOZw99wwitKiRYsWLVq0aNGiRYsWLf5NYPanRQFwTBFOvW7xBJym3l9/i8qD0YQY4GVLViG4QOHF+XM5QUqrhc8xOQ8otffTv/4edQBeU6qqKr24f/1NaoD5BrhS1cGi+9dfpfoYDThXqv2BWqP1BGg0MCVZrWQVA6fJQn/9bSqPmCyVSVarhsVo1fANtGr4BlrJegMtWW+gJesNtGS9jF5LlvJGtUWSZf53veEbVTxOlv0fDx3wa7KFlamoOpiD0+tkNYpWhPGr60F4y8mi+8l/M9txT5//rKcv0oVmF5VSeh2hF7d3kOu6DaGVqd/k02arP5xgRVmrEr/rydFs/PHz9jFDX97Pg3u67fbjydNxNcGHzRTLpIflU0mRhg2h7mtiyIa76yG7E/ZnQ4rQk6uoEzPZyh8UscRoEuiirmCskF/krgfUNlWqjtGzsbXA/CALVPRwLFpNt0sm89HidBx/fHyMj6fTaO5GjOUAuVtb3Alz3wzRmuzEehhbg3EmW5iJFJ4t1rf9ZjgwqYBpDzfX23oxwyiPLzQ5y5lVc9cQ57mOVqTSYSZbyO0fL5uByjniEakggP2nOthcxn03ky/GVTy2MTtnLBYwH9mKonpE5sfbQeWbhab6CJOqh9txDnT1UrkATrgyQWYL7GFtANR05xeqJmwR+Q53fQhPt7sBpRks8WxaXETt3XZK7qQLRzpoA5/21m1CZwRnawZsmWm7JeSri/pn5vkTzXuUK1tcZprDc1/pxg6vx7iiyaBtQ5QQgOZ7GovJcIFgxT349XqTpX5m8tNMeKSH7TwWLuSe7fg9+zxpxoasDKCm+0QTZQCJ3OXOvtc/7glVUaKRL1M8UnV3dAVdGB2TS83zpAk6yMHX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">
+             
+        <div id="weather_detail">
+            <div id="temp">
+                <p id="Tem">Temperature</p>
+                <p id="max">Max Temp:</p>
+                <p id="min">Min Temp:</p>
+            </div>
+            <div id="humi">
+                <p id="hum">Humidity</p>
+                <p id="wind">Windspeed</p>
+                <p id="cloud">clouds</p>
+            </div>
+        </div>
+            
+    
+        </div>
+            
+        <div id="map">
+            <iframe id="mapFrame" width="700" height="650" frameborder="0" allowfullscreen></iframe>
+    
+        </div>
+    </div>
+   
+    
+        
+  <script src="index.js"></script>  
+</body>
+</html>
