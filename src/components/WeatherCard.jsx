@@ -59,12 +59,13 @@ const WeatherCard = () => {
 
   return (
     <Box
-      margin={"100px auto"}
+      // margin={"100px auto"}
+     
       maxW="400px"
       borderWidth="1px"
       borderRadius="lg"
       overflow="hidden"
-      p="8"
+      p={"4px"}
       bgGradient="linear(to top, #5ee7df 0%, #b490ca 100%)"
       color="white"
       boxShadow="xl"
