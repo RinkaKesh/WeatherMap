@@ -18,35 +18,42 @@ const SearchInput = () => {
     setCity(input);
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      setCity(input);
+    }
+  };
+
   return (
     <Flex
       as="nav"
       align="center"
       justify="space-around"
-      py="1rem"
+      padding="1rem"
       bg="gray.800"
       color="white"
       direction={{ base: 'column', md: 'row' }}
     >
-      {/* Left side: Logo */}
+      {/*  logo */}
       <Flex align="center" mb={{ base: '1rem', md: 0 }}>
-        <Heading as="h1" size="lg" color={"gold"}>
+        <Heading as="h1" size="lg" color="gold">
           WeatherMap
         </Heading>
       </Flex>
 
       {/* input sec  */}
-      <Flex align="center" >
-        <InputGroup size="lg" maxW="md" width={{ base: '100%', md: 'auto' }} >
+      <Flex align="center">
+        <InputGroup size="lg" maxW="md" width={{ base: '100%', md: 'auto' }}>
           <Input
             placeholder="Search City Here"
             name="city"
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
+            onKeyPress={handleKeyPress} 
           />
-          <InputRightAddon onClick={handleSearch} cursor="pointer" bg={"gold"}>
-            <SearchIcon color={"black"} />
+          <InputRightAddon onClick={handleSearch} cursor="pointer" bg="gold">
+            <SearchIcon color="black" />
           </InputRightAddon>
         </InputGroup>
       </Flex>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useTypewriter } from 'react-simple-typewriter';
 import { ArrowRightIcon } from '@chakra-ui/icons';
 
-// Import your images
+//  images
 import Image1 from "../../public/Image1.jpeg";
 import Image2 from "../../public/Image2.webp";
 import Image3 from "../../public/Image3.jpeg";
@@ -70,8 +70,9 @@ const Home = () => {
         style={{
           textAlign: 'center',
           marginTop: '25px',
-          fontSize: '20px',
+          fontSize: '25px',
           color: 'white',
+          fontWeight:"700",
           textDecoration: 'underline',
         }}
       >

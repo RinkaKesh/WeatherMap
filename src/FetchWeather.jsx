@@ -20,7 +20,7 @@ const FetchWeather = () => {
       } catch (error) {
         console.error('Error fetching data:', error);
         setWeatherData(null);
-        setError('City not found. Please try another city.');
+        setError(`'${city}' not found. Please try another city.`);
       }
     };
 
