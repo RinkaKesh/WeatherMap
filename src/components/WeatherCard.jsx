@@ -64,8 +64,8 @@ const WeatherCard = () => {
       borderWidth="1px"
       borderRadius="lg"
       overflow="hidden"
-      p="4"
-      bgGradient="linear(to-r, #fc466b, #3f5efb)"
+      p="8"
+      bgGradient="linear(to top, #5ee7df 0%, #b490ca 100%)"
       color="white"
       boxShadow="xl"
       _hover={{ transform: 'scale(1.02)' }}

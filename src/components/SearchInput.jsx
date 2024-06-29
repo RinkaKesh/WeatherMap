@@ -23,21 +23,21 @@ const SearchInput = () => {
       as="nav"
       align="center"
       justify="space-around"
-      padding="1rem"
+      py="1rem"
       bg="gray.800"
       color="white"
       direction={{ base: 'column', md: 'row' }}
     >
       {/* Left side: Logo */}
       <Flex align="center" mb={{ base: '1rem', md: 0 }}>
-        <Heading as="h1" size="lg">
+        <Heading as="h1" size="lg" color={"gold"}>
           WeatherMap
         </Heading>
       </Flex>
 
       {/* input sec  */}
-      <Flex align="center">
-        <InputGroup size="lg" maxW="md" width={{ base: '100%', md: 'auto' }}>
+      <Flex align="center" >
+        <InputGroup size="lg" maxW="md" width={{ base: '100%', md: 'auto' }} >
           <Input
             placeholder="Search City Here"
             name="city"
